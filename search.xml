@@ -4,5 +4,17 @@
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F06%2F01%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[终于有自己的博客啦！]]></title>
+    <url>%2F2019%2F06%2F01%2Ffirst-blog%2F</url>
+    <content type="text"><![CDATA[Hello World!2017年建的repo, 当时就想利用github pages做一下博客，一直拖着哈哈，最近才发现居然有hexo这么好用的工具，于是就搞了一个！算是有了一个可以激励自己记录学习笔记和生活的地方，希望能多发点东西嘻嘻。 Configure Reference配置主要是参考了以下文章：Mac+Hexo+GitHub搭建博客教程使用Hexo搭建GitHub博客 Some tips安装过程遇到了一点问题，我一开始以为是版本或者是访问权限的问题，最后发现是npm的版本过低了。我在配置中遇到的问题如下： Permission Denied1Error: EACCES: permission denied, access '/Users/apple/node_modules/hexo-deployer-git' Solution: 1$ sudo chown -R 'username' /Users/apple/node_modules/ Deployer Not Found:1ERROR Deployer not found: git 首先确定config.yml里的deploy部分的内容和教程里的完全一样，因为yaml的语法非常严格，空格缩进都得一致。 然后在bash输入以下命令： 1$ npm install hexo-deployer-git --save 应该到这里大部分人都成功安装了hexo-deployer-git，按需跑以下命令。 1$ npm audit fix 但是我在安装hexo-deploy-git失败了，而且提示的错误也很隐蔽，也没有提示我说要跑audit fix这个命令，后来我发现我的npm甚至都没有audit这个命令，最后确定了是我npm版本过低导致的🤣，以下命令可以查看npm版本，我最后用的是npm6.9.0: 123$ npm -v or$ hexo -v 用以下命令来升级npm 1$ npm install npm -g 然后就可以成功安装git deploy的工具了！配置告一段落，可以选个主题美化一下界面啦！我应用的是比较大众的next theme，感谢一下contributor们。另外也可以到theme store去挑选。]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Murmur</tag>
+      </tags>
   </entry>
 </search>
