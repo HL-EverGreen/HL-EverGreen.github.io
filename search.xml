@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac OS配置Zsh及部分插件]]></title>
+    <url>%2F2019%2F07%2F02%2Fzsh-configure%2F</url>
+    <content type="text"><![CDATA[关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！实在是提升效率的法宝，安装也非常简单，话不多说，进入正题。 Configure Reference配置主要是参考了以下文章：Zsh配置Zsh插件推荐及安装 ConfigureZshMac自带了zsh，但版本可能比较旧，可以用 1zsh --version 查看当前版本，要安装最新版可通过brew： 1brew install zsh 将zsh设为默认shell： 1chsh -s /bin/zsh 与mac默认的bash相同，zsh的配置文件目录为~/.zshrc Oh My Zsh与Linux配置Zsh需要繁琐的前期工作不同，Mac OS可以通过oh my zsh来管理zsh，方便插件管理、自定义主题等。omz github主页安装命令： 123sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" orsh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 安装完成后，可以到~/.oh-my-zsh查看omz目录。 Zsh PluginsOh my zsh项目提供了完善的插件体系，相关的文件在~/.oh-my-zsh/plugins目录下，这里推荐三个比较好用的插件： zsh-autosuggestions这个插件我只能说无敌，效率神器， github主页安装： 1git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions 然后在.zshrc内plugins栏加上zsh-autosuggestions。 这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。 zsh-syntax-highlighting合法命令颜色高亮，typo救星！github主页安装： 1git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting 同样要在.zshrc内plugin栏加上zsh-syntax-highlighting。 autojump实现目录间快速跳转，不用一直cd了！通过brew安装： 1brew install autojump 把下列代码加进.zshrc: 1[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh 然后在plugin内加入autojump。]]></content>
+      <categories>
+        <category>Techs</category>
+      </categories>
+      <tags>
+        <tag>Mac OS</tag>
+        <tag>Zsh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[终于有自己的博客啦！]]></title>
-    <url>%2F2019%2F06%2F01%2Ffirst-blog%2F</url>
+    <url>%2F2019%2F06%2F02%2Ffirst-blog%2F</url>
     <content type="text"><![CDATA[Hello World!2017年建的repo, 当时就想利用github pages做一下博客，一直拖着哈哈，最近才发现居然有hexo这么好用的工具，于是就搞了一个！算是有了一个可以激励自己记录学习笔记和生活的地方，希望能多发点东西嘻嘻。 Configure Reference配置主要是参考了以下文章：Mac+Hexo+GitHub搭建博客教程使用Hexo搭建GitHub博客 Some tips安装过程遇到了一点问题，我一开始以为是版本或者是访问权限的问题，最后发现是npm的版本过低了。我在配置中遇到的问题如下： Permission Denied1Error: EACCES: permission denied, access '/Users/apple/node_modules/hexo-deployer-git' Solution: 1$ sudo chown -R 'username' /Users/apple/node_modules/ Deployer Not Found:1ERROR Deployer not found: git 首先确定config.yml里的deploy部分的内容和教程里的完全一样，因为yaml的语法非常严格，空格缩进都得一致。 然后在bash输入以下命令： 1$ npm install hexo-deployer-git --save 应该到这里大部分人都成功安装了hexo-deployer-git，按需跑以下命令。 1$ npm audit fix 但是我在安装hexo-deploy-git失败了，而且提示的错误也很隐蔽，也没有提示我说要跑audit fix这个命令，后来我发现我的npm甚至都没有audit这个命令，最后确定了是我npm版本过低导致的🤣，以下命令可以查看npm版本，我最后用的是npm6.9.0: 123$ npm -v or$ hexo -v 用以下命令来升级npm 1$ npm install npm -g 然后就可以成功安装git deploy的工具了！配置告一段落，可以选个主题美化一下界面啦！我应用的是比较大众的next theme，感谢一下contributor们。另外也可以到theme store去挑选。]]></content>
       <categories>
         <category>Murmur</category>
@@ -21,18 +33,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Mac OS配置Zsh及部分插件]]></title>
-    <url>%2F2019%2F06%2F01%2Fzsh-configure%2F</url>
-    <content type="text"><![CDATA[关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！实在是提升效率的法宝，安装也非常简单，话不多说，进入正题。 Configure Reference配置主要是参考了以下文章：Zsh配置Zsh插件推荐及安装 ConfigureZshMac自带了zsh，但版本可能比较旧，可以用 1zsh --version 查看当前版本，要安装最新版可通过brew： 1brew install zsh 将zsh设为默认shell： 1chsh -s /bin/zsh 与mac默认的bash相同，zsh的配置文件目录为~/.zshrc Oh My Zsh与Linux配置Zsh需要繁琐的前期工作不同，Mac OS可以通过oh my zsh来管理zsh，方便插件管理、自定义主题等。omz github主页安装命令： 123sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" orsh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 安装完成后，可以到~/.oh-my-zsh查看omz目录。 Zsh PluginsOh my zsh项目提供了完善的插件体系，相关的文件在~/.oh-my-zsh/plugins目录下，这里推荐三个比较好用的插件： zsh-autosuggestions这个插件我只能说无敌，效率神器， github主页安装： 1git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions 然后在.zshrc内plugins栏加上zsh-autosuggestions。 这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。 zsh-syntax-highlighting合法命令颜色高亮，typo救星！github主页安装： 1git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting 同样要在.zshrc内plugin栏加上zsh-syntax-highlighting。 autojump实现目录间快速跳转，不用一直cd了！通过brew安装： 1brew install autojump 把下列代码加进.zshrc: 1[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh 然后在plugin内加入autojump。]]></content>
-      <categories>
-        <category>Techs</category>
-      </categories>
-      <tags>
-        <tag>Mac OS</tag>
-        <tag>Zsh</tag>
       </tags>
   </entry>
 </search>
