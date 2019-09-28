@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-02T20:02:12-07:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-02T23:02:12-04:00">
                 2019-07-02
               </time>
             
@@ -336,7 +336,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-07-02T20:15:43-07:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-07-02T23:15:43-04:00">
                 2019-07-02
               </time>
             
@@ -367,6 +367,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/02/zsh-configure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/02/zsh-configure/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -491,7 +501,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T20:02:12-07:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T23:02:12-04:00">
                 2019-06-02
               </time>
             
@@ -507,7 +517,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-07-02T20:16:40-07:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-07-02T23:16:40-04:00">
                 2019-07-02
               </time>
             
@@ -538,6 +548,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/02/first-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/02/first-blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -631,7 +651,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/01/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Haoran Li">
@@ -650,7 +670,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/01/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/06/02/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -662,8 +682,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-01T22:26:13-07:00">
-                2019-06-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T01:26:13-04:00">
+                2019-06-02
               </time>
             
 
@@ -678,7 +698,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-06-02T20:28:43-07:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-06-02T23:28:43-04:00">
                 2019-06-02
               </time>
             
@@ -710,11 +730,21 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/02/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/02/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
           
-             <span id="/2019/06/01/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/06/02/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -751,7 +781,7 @@
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/06/01/hello-world/#more" rel="contents">
+            <a class="btn" href="/2019/06/02/hello-world/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1088,6 +1118,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'HMFLTAujFg2Ahi2nhj4l5VaW-MdYXbMMI',
+        appKey: 'GIAR5wvqYXLwBWE0qirQxLxY',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
