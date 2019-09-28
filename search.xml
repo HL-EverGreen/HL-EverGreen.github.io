@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Mac OS配置Zsh及部分插件]]></title>
     <url>%2F2019%2F07%2F02%2Fzsh-configure%2F</url>
-    <content type="text"><![CDATA[关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！实在是提升效率的法宝，安装也非常简单，话不多说，进入正题。 Configure Reference配置主要是参考了以下文章：Zsh配置Zsh插件推荐及安装 ConfigureZshMac自带了zsh，但版本可能比较旧，可以用 1zsh --version 查看当前版本，要安装最新版可通过brew： 1brew install zsh 将zsh设为默认shell： 1chsh -s /bin/zsh 与mac默认的bash相同，zsh的配置文件目录为~/.zshrc Oh My Zsh与Linux配置Zsh需要繁琐的前期工作不同，Mac OS可以通过oh my zsh来管理zsh，方便插件管理、自定义主题等。omz github主页安装命令： 123sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" orsh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 安装完成后，可以到~/.oh-my-zsh查看omz目录。 Zsh PluginsOh my zsh项目提供了完善的插件体系，相关的文件在~/.oh-my-zsh/plugins目录下，这里推荐三个比较好用的插件： zsh-autosuggestions这个插件我只能说无敌，效率神器， github主页安装： 1git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions 然后在.zshrc内plugins栏加上zsh-autosuggestions。 这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。 zsh-syntax-highlighting合法命令颜色高亮，typo救星！github主页安装： 1git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting 同样要在.zshrc内plugin栏加上zsh-syntax-highlighting。 autojump实现目录间快速跳转，不用一直cd了！通过brew安装： 1brew install autojump 把下列代码加进.zshrc: 1[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh 然后在plugin内加入autojump。]]></content>
+    <content type="text"><![CDATA[关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！实在是提升效率的法宝，安装也非常简单，话不多说，进入正题。 Configure Reference配置主要是参考了以下文章：Zsh配置Zsh插件推荐及安装 ConfigureZshMac自带了zsh，但版本可能比较旧，可以用 1zsh --version 查看当前版本，要安装最新版可通过brew： 1brew install zsh 将zsh设为默认shell： 1chsh -s /bin/zsh 与mac默认的bash相同，zsh的配置文件目录为~/.zshrc Oh My Zsh与Linux配置Zsh需要繁琐的前期工作不同，Mac OS可以通过oh my zsh来管理zsh，方便插件管理、自定义主题等。omz github主页安装命令： 123sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" orsh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 安装完成后，可以到~/.oh-my-zsh查看omz目录。 Zsh PluginsOh my zsh项目提供了完善的插件体系，相关的文件在~/.oh-my-zsh/plugins目录下，这里推荐三个比较好用的插件： zsh-autosuggestions这个插件我只能说无敌，效率神器， github主页安装： 1git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions 然后在.zshrc内plugins栏加上zsh-autosuggestions。这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。 zsh-syntax-highlighting合法命令颜色高亮，typo救星！github主页安装： 1git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting 同样要在.zshrc内plugin栏加上zsh-syntax-highlighting。 autojump实现目录间快速跳转，不用一直cd了！通过brew安装： 1brew install autojump 把下列代码加进.zshrc: 1[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh 然后在plugin内加入autojump。]]></content>
       <categories>
         <category>Techs</category>
       </categories>
@@ -20,8 +20,8 @@
         <category>Murmur</category>
       </categories>
       <tags>
-        <tag>Murmur</tag>
         <tag>Hexo</tag>
+        <tag>Murmur</tag>
       </tags>
   </entry>
   <entry>

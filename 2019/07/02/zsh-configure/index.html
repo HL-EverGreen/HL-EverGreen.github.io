@@ -4,7 +4,7 @@
 
 
 <html class="theme-next gemini" lang>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -322,7 +322,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-02T23:02:12-04:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-02T20:02:12-04:00">
                 2019-07-02
               </time>
             
@@ -376,7 +376,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/07/02/zsh-configure/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/02/zsh-configure/" itemprop="commentCount"></span>
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/07/02/zsh-configure/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -435,8 +435,7 @@
 <h4 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h4><p>这个插件我只能说无敌，效率神器， <a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">github主页</a><br>安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
 
-<p>然后在<code>.zshrc</code>内plugins栏加上<code>zsh-autosuggestions</code>。
-这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。</p>
+<p>然后在<code>.zshrc</code>内plugins栏加上<code>zsh-autosuggestions</code>。<br>这个插件能够根据历史命令帮你补全命令，按-&gt;即可补全。</p>
 <h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p>合法命令颜色高亮，typo救星！<a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">github主页</a><br>安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 
@@ -519,7 +518,11 @@
 
   
     <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
     </div>
+
   
 
 
@@ -837,6 +840,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '31678378',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '7d9c22cc00e7272081943466daeaed48543671d1',
+            
+                client_id: 'c8e2cdead923f5b21b06'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
