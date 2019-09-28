@@ -645,7 +645,7 @@
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick, mail';
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
@@ -655,8 +655,8 @@
         notify: false,
         appId: 'HMFLTAujFg2Ahi2nhj4l5VaW-MdYXbMMI',
         appKey: 'GIAR5wvqYXLwBWE0qirQxLxY',
-        placeholder: 'Just go go',
-        avatar:'mm',
+        placeholder: 'Leave your comment! (I use Gravatar, so remember to fill in your email!)',
+        avatar:'mp',
         guest_info:guest,
         pageSize:'10' || 10,
     });
