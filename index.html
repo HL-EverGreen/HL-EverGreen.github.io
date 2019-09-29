@@ -404,7 +404,16 @@
       
         
           
-          关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！
+          关于Zsh和Bash一样，Zsh也是一款可用作交互式登录的shell及脚本编写的命令解释器，其实mac自带了zsh，之前因为不熟悉一直没用，直到实习的时候mentor推荐我用我才发现居然还有这种神器！实在是提升效率的法宝，安装也非常简单，话不多说，进入正题。
+Configure Reference配置主要是参考了以下文章：Zsh配置Zsh插件推荐及安装
+ConfigureZshMac自带了zsh，但版本可能比较旧，可以用
+1zsh --version
+
+查看当前版本，要安装最新版可通过brew：
+1brew install zsh
+
+将zsh设为默认shell：
+1chsh -s /bin/z
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -574,7 +583,10 @@
       
         
           
-          Hello World!2017年建的repo, 当时就想利用github pages做一下博客，一直拖着哈哈，最近才发现居然有hexo这么好用的工具，于是就搞了一个！算是有了一个可以激励自己记录学习
+          Hello World!2017年建的repo, 当时就想利用github pages做一下博客，一直拖着哈哈，最近才发现居然有hexo这么好用的工具，于是就搞了一个！算是有了一个可以激励自己记录学习笔记和生活的地方，希望能多发点东西嘻嘻。
+Configure Reference配置主要是参考了以下文章：Mac+Hexo+GitHub搭建博客教程使用Hexo搭建GitHub博客
+Some tips安装过程遇到了一点问题，我一开始以为是版本或者是访问权限的问题，最后发现是npm的版本过低了。我在配置中遇到的问题如下：
+Permission Denied1Error: EACCES: permis
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -744,7 +756,13 @@
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pro
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
+
+More info: Writing
+Run server1$ hexo server
+
+More 
           ...
           <!--noindex-->
           <div class="post-button text-center">
